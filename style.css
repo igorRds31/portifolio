@@ -1,0 +1,201 @@
+
+/* ===== IMPORTAÇÃO DE FONTES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+/* ===== VARIÁVEIS GLOBAIS ===== */
+:root {
+    --cor-primaria: #1b28de;
+    --cor-secundaria: #f6f6f6;
+    --cor-destaque: #000000de;
+    --cor-fundo: #000000;
+    --cor-texto: #ffffff;
+    --cor-borda: #0a0a0a00;
+    --fonte-principal: 'Montserrat', sans-serif;
+    --fonte-secundaria: 'Krona One', sans-serif;
+}
+
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== FUNDO PADRÃO ===== */
+body, .about, .projetos {
+    margin: 0;
+    padding: 0;
+    background-image: url('img/principal2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-principal);
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0 0 10%;
+    width: 100%;
+    align-items: center;
+}
+.navegacao {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.navegacao__link {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--cor-fundo);
+    text-decoration: none;
+}
+
+/* ===== TÍTULOS E DESTAQUES ===== */
+.Titulo-Destaque {
+    color: #000;
+}
+
+/* ===== IMAGENS ===== */
+img {
+    width: 30%;
+    align-items: center;
+}
+.Foto-perfil-Desenho {
+    width: 30%;
+}
+.foto-projetos {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* ===== APRESENTAÇÃO ===== */
+.apresentacao {
+    padding: 10% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.apresentacao__textos {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.apresentacao__textos h1 {
+    font-size: 2.25rem;
+    font-family: var(--fonte-secundaria);
+}
+.apresentacao__textos p {
+    font-size: 1.5rem;
+    font-family: var(--fonte-principal);
+}
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.botoes__link {
+    border: 5px solid var(--cor-borda);
+    color: var(--cor-destaque);
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 24.5px 0;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: var(--fonte-principal);
+    transition: background-color 0.3s ease;
+}
+.botoes__link:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+}
+
+/* ===== CONTEÚDO CENTRAL ===== */
+.conteudo {
+  position: relative;
+  z-index: 1;
+  color: var(--cor-texto);
+  text-align: center;
+  margin-top: 20%;
+}
+
+/* ===== REDES SOCIAIS ===== */
+.redes_Sociais {
+    font-family: var(--fonte-principal);
+    color: #000;
+}
+.instagram, .gitHub, .whatsApp {
+    width: 30px;
+    margin-left: 10px;
+    margin-bottom: -5px;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    color: #000;
+    background-color: #0567fa07;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+/* ===== PROJETOS ===== */
+.titulo-projeto {
+    font-size: 1.75rem;
+    margin-top: 10px;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-destaque);
+}
+.link-projetos {
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    font-family: var(--fonte-principal);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 5% 0 0 10%;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 5%;
+        gap: 40px;
+    }
+    .apresentacao__textos {
+        width: auto;
+        gap: 40px;
+    }
+    .apresentacao__textos h1 {
+        font-size: 2rem;
+    }
+    .apresentacao__textos p {
+        font-size: 1.25rem;
+    }
+    .botoes__link {
+        font-size: 1.25rem;
+        padding: 20px 0;
+        width: 70%;
+    }
+    .navegacao {
+        gap: 20px;
+        padding-right: 10px;
+    }
+    .navegacao__link {
+        font-size: 1.1rem;
+    }
+}
